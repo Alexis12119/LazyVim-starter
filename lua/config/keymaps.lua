@@ -1,0 +1,34 @@
+-- Keymaps are automatically loaded on the VeryLazy event
+-- Default keymaps that are always set: https://github.com/LazyVim/LazyVim/blob/main/lua/lazyvim/config/keymaps.lua
+-- Add any additional keymaps here
+local utils = require("config.utils")
+
+-- Go to previous tab
+vim.keymap.set("n", "<Left>", "<cmd>tabprevious<CR>", { desc = "General | Go to previous tab", silent = true })
+
+-- Go to next tab
+vim.keymap.set("n", "<Right>", "<cmd>tabnext<CR>", { desc = "General | Go to next tab", silent = true })
+
+-- New tab
+vim.keymap.set("n", "<Up>", "<cmd>tabnew<CR>", { desc = "General | New tab", silent = true })
+
+-- Close tab
+vim.keymap.set("n", "<Down>", "<cmd>tabclose<CR>", { desc = "General | Close tab", silent = true })
+
+vim.keymap.set("n", "<leader>ce", function()
+  utils.run_code()
+end, { desc = "Execute Code", silent = true })
+
+vim.keymap.set("n", "<leader>P", function()
+  utils.bootstrap_project()
+end, { desc = "Project Bootstrap", silent = true })
+
+-- -- Go to previous buffer
+-- vim.keymap.set("n", "H", function()
+--   require("nvchad.tabufline").prev()
+-- end, { desc = "General | Go to previous buffer", silent = true })
+--
+-- -- Go to next buffer
+-- vim.keymap.set("n", "L", function()
+--   require("nvchad.tabufline").next()
+-- end, { desc = "General | Go to next buffer", silent = true })

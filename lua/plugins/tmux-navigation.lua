@@ -4,7 +4,7 @@
 return {
   "alexghergh/nvim-tmux-navigation",
   enabled = vim.fn.executable("tmux") == 1,
-  event = vim.env.TMUX ~= nil and "VeryLazy" or nil,
+  event = "VeryLazy",
   opts = {
     keybindings = {
       left = "<C-h>",

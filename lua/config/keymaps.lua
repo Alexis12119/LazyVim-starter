@@ -22,13 +22,3 @@ end, { desc = "Execute Code", silent = true })
 vim.keymap.set("n", "<leader>P", function()
   utils.bootstrap_project()
 end, { desc = "Project Bootstrap", silent = true })
-
--- -- Go to previous buffer
--- vim.keymap.set("n", "H", function()
---   require("nvchad.tabufline").prev()
--- end, { desc = "General | Go to previous buffer", silent = true })
---
--- -- Go to next buffer
--- vim.keymap.set("n", "L", function()
---   require("nvchad.tabufline").next()
--- end, { desc = "General | Go to next buffer", silent = true })

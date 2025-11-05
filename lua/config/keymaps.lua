@@ -15,10 +15,16 @@ vim.keymap.set("n", "<Up>", "<cmd>tabnew<CR>", { desc = "General | New tab", sil
 -- Close tab
 vim.keymap.set("n", "<Down>", "<cmd>tabclose<CR>", { desc = "General | Close tab", silent = true })
 
+-- Run Code
 vim.keymap.set("n", "<leader>ce", function()
   utils.run_code()
 end, { desc = "Execute Code", silent = true })
 
+-- Project Bootstrap
 vim.keymap.set("n", "<leader>P", function()
   utils.bootstrap_project()
 end, { desc = "Project Bootstrap", silent = true })
+
+-- lazy
+vim.keymap.set("n", "<leader>le", "<cmd>LazyExtras<cr>", { desc = "Lazy Extras" })
+vim.keymap.set("n", "<leader>ll", "<cmd>Lazy<cr>", { desc = "Lazy Home" })

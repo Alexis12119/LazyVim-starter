@@ -12,7 +12,7 @@ return {
     "DiffviewClose",
   },
   init = function()
-    vim.keymap.set("n", "<leader>gv", function()
+    vim.keymap.set("n", "<leader>gd", function()
       if next(require("diffview.lib").views) == nil then
         vim.cmd("DiffviewOpen")
       else
@@ -22,7 +22,7 @@ return {
 
     vim.keymap.set(
       "n",
-      "<leader>gV",
+      "<leader>gD",
       "<cmd>DiffviewFileHistory<cr>",
       { desc = "Diffview | File History", silent = true }
     )

@@ -7,7 +7,6 @@ return {
     local custom_path = "plugins.lsp.settings"
 
     local disabled_servers = {
-      "jdtls",
       "phpactor",
       "rust_analyzer",
       -- add more if needed

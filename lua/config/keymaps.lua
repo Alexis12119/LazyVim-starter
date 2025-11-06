@@ -3,6 +3,10 @@
 -- Add any additional keymaps here
 local utils = require("config.utils")
 
+vim.keymap.set("n", "<leader>y", "<cmd>%y+<cr>", { desc = "Yank All Text", silent = true })
+
+vim.keymap.set("n", "<leader>bs", "<cmd>SudaWrite<cr>", { desc = "Save With Root", silent = true })
+
 -- Go to previous tab
 vim.keymap.set("n", "<Left>", "<cmd>tabprevious<CR>", { desc = "General | Go to previous tab", silent = true })
 

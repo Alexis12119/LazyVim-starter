@@ -13,7 +13,7 @@ local function get_venv(variable)
   return venv
 end
 
-local function python_venv()
+local python_venv = function()
   if vim.bo.filetype ~= "python" then
     return " "
   end
@@ -25,12 +25,57 @@ local function python_venv()
     return "  " .. venv
   end
 end
+local clients = function()
+  local clients = {}
+  local buf = vim.api.nvim_get_current_buf()
+
+  -- Iterate through all the clients for the current buffer
+  for _, client in pairs(vim.lsp.get_clients({ bufnr = buf })) do
+    -- Add the client name to the `clients` table
+    table.insert(clients, client.name)
+  end
+
+  local lint_ok, lint = pcall(require, "lint")
+  if lint_ok then
+    local linters = {}
+    local fts = vim.split(vim.bo.filetype, ".", { plain = true, trimempty = true })
+    for _, ft in pairs(fts) do
+      vim.list_extend(linters, lint.linters_by_ft[ft] or {})
+    end
+    if #linters ~= 0 then
+      table.insert(clients, table.concat(linters, ", "))
+    end
+  end
+
+  local conform_ok, conform = pcall(require, "conform")
+  if conform_ok then
+    local formatters = conform.list_formatters(0)
+    for _, formatter in pairs(formatters) do
+      -- Check if the formatter is already in the clients table
+      if not vim.tbl_contains(clients, formatter.name) then
+        table.insert(clients, formatter.name)
+      end
+    end
+  end
+
+  if #clients == 0 then
+    return ""
+  else
+    return (vim.o.columns > 100 and (" %#St_gitIcons#" .. table.concat(clients, ", ") .. " ")) or "  LSP "
+  end
+end
 
 return {
   {
     "nvim-lualine/lualine.nvim",
     opts = function(_, opts)
-      table.insert(opts.sections.lualine_x, { python_venv })
+      table.insert(opts.sections.lualine_x, { clients })
+      table.insert(opts.sections.lualine_x, {
+        function()
+          local venv = python_venv()
+          return venv ~= " " and venv or ""
+        end,
+      })
       opts.always_show_tabline = false
     end,
   },

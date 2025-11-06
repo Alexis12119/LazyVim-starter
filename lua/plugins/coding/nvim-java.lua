@@ -5,48 +5,14 @@ return {
   {
     "nvim-java/nvim-java",
     ft = { "java" },
-    config = false,
-    dependencies = {
-      {
-        "neovim/nvim-lspconfig",
-        opts = {
-          servers = {
-            -- Your JDTLS configuration goes here
-            jdtls = {
-              -- settings = {
-              --   java = {
-              --     configuration = {
-              --       runtimes = {
-              --         {
-              --           name = "JavaSE-23",
-              --           path = "/usr/local/sdkman/candidates/java/23-tem",
-              --         },
-              --       },
-              --     },
-              --   },
-              -- },
-            },
-          },
-          setup = {
-            jdtls = function()
-              -- Your nvim-java configuration goes here
-              require("java").setup({
-                -- root_markers = {
-                --   "settings.gradle",
-                --   "settings.gradle.kts",
-                --   "pom.xml",
-                --   "build.gradle",
-                --   "mvnw",
-                --   "gradlew",
-                --   "build.gradle",
-                --   "build.gradle.kts",
-                -- },
-              })
-            end,
-          },
-        },
-      },
-    },
+    opts = {},
+    config = function(_, opts)
+      require("java").setup(opts)
+      require("lspconfig").jdtls.setup({
+        on_attach = require("lazyvim.util.lsp").on_attach(),
+        capabilities = require("blink.cmp").get_lsp_capabilities(),
+      })
+    end,
   },
   {
     "mfussenegger/nvim-jdtls",

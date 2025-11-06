@@ -7,22 +7,12 @@
 -- * add extra plugins
 -- * disable/enabled LazyVim plugins
 -- * override the configuration of LazyVim plugins
--- stylua: ignore
 return {
   {
     "LazyVim/LazyVim",
     opts = {
       -- we still use tokyonight as the base scheme, but override heavily to match github_dark_dimmed
       colorscheme = "tokyonight-night",
-    },
-  },
-  {
-    "folke/tokyonight.nvim",
-    opts = {
-      style = "night",
-    on_highlights = function(hl, _)
-      hl.DiffviewDiffDelete = { bg = "#422b2b", fg ="#422b2b"}
-    end,
     },
   },
 }

@@ -3,8 +3,13 @@
 -- Add any additional keymaps here
 local utils = require("config.utils")
 
+-- Yank All Text
 vim.keymap.set("n", "<leader>y", "<cmd>%y+<cr>", { desc = "Yank All Text", silent = true })
 
+-- Delete All Text
+vim.keymap.set("n", "<leader>bR", "<cmd>%d+<cr>", { desc = "Remove All Text", silent = true })
+
+-- Save With Root
 vim.keymap.set("n", "<leader>bs", "<cmd>SudaWrite<cr>", { desc = "Save With Root", silent = true })
 
 -- Go to previous tab

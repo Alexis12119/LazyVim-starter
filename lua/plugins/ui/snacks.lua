@@ -9,7 +9,7 @@ return {
     explorer = { enabled = false },
   },
   keys = {
-    -- { "<leader>e", false },
-    -- { "<leader>E", false },
+    { "<leader>e", false },
+    { "<leader>E", false },
   },
 }

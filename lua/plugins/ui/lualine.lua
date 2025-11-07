@@ -113,8 +113,7 @@ local clients = function()
   if #result == 0 then
     return ""
   else
-    return (vim.o.columns > 100 and (" %#St_gitIcons#" .. table.concat(result, default_symbols.separator) .. " "))
-      or "  LSP "
+    return (vim.o.columns > 100 and (table.concat(result, default_symbols.separator) .. " ")) or "  LSP "
   end
 end
 

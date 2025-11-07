@@ -7,6 +7,7 @@ return {
     opts = {
       library = {
         "lazy.nvim",
+        "ui/nvchad_types",
         -- Library items can be absolute paths
         -- "~/projects/my-awesome-lib",
         -- Or relative, which means they will be resolved as a plugin

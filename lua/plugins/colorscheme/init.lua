@@ -12,7 +12,7 @@ return {
     "LazyVim/LazyVim",
     opts = {
       -- we still use tokyonight as the base scheme, but override heavily to match github_dark_dimmed
-      colorscheme = "tokyonight-night",
+      colorscheme = "nvchad",
     },
   },
 }

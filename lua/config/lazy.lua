@@ -35,6 +35,9 @@ require("lazy").setup({
     enabled = true, -- check for plugin updates periodically
     notify = false, -- notify on update
   }, -- automatically check for plugin updates
+  diff = {
+    cmd = "diffview.nvim",
+  },
   change_detection = {
     -- automatically check for config file changes and reload the ui
     enabled = true,

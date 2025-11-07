@@ -53,7 +53,7 @@ return {
       timeout = 5000,
     },
     view = {
-      cursorline = false,
+      cursorline = true,
       float = {
         enable = false,
         quit_on_focus_loss = true,

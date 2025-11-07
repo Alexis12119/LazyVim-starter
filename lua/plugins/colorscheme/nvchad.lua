@@ -12,8 +12,6 @@ return {
     build = function()
       require("base46").load_all_highlights()
     end,
-    config = function()
-    end,
   },
 
   "nvchad/volt", -- optional, needed for theme switcher

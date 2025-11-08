@@ -121,6 +121,7 @@ return {
   {
     "nvim-lualine/lualine.nvim",
     opts = function(_, opts)
+      table.remove(opts.sections.lualine_c, 5)
       table.insert(opts.sections.lualine_x, { clients })
       table.insert(opts.sections.lualine_x, {
         function()

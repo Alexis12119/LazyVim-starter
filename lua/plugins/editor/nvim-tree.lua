@@ -17,7 +17,7 @@ end
 -- NOTE: File Explorer
 return {
   "nvim-tree/nvim-tree.lua",
-  -- enabled = false,
+  enabled = false,
   init = function()
     vim.keymap.set("n", "<leader>e", "<cmd>NvimTreeToggle<cr>", { desc = "NvimTree | Explorer", silent = true })
   end,

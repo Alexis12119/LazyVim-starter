@@ -5,7 +5,6 @@ require("config.lazy")
 
 require("config.filetypes")
 require("config.utils")
-require("config.globals")
 
 for _, v in ipairs(vim.fn.readdir(vim.g.base46_cache)) do
   dofile(vim.g.base46_cache .. v)

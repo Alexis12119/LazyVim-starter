@@ -31,13 +31,7 @@ return {
   opts = {
     on_attach = on_attach,
     diagnostics = {
-      enable = false,
-      icons = {
-        hint = "󰌵",
-        info = "",
-        warning = "",
-        error = "",
-      },
+      enable = true,
     },
     sync_root_with_cwd = true,
     update_focused_file = {
@@ -54,6 +48,7 @@ return {
     },
     view = {
       cursorline = true,
+      width = 40,
       float = {
         enable = false,
         quit_on_focus_loss = true,
@@ -67,42 +62,12 @@ return {
         },
       },
     },
-
     renderer = {
-      highlight_git = false,
+      highlight_git = true,
       root_folder_label = ":~:s?$?",
-      icons = {
-        show = {
-          file = true,
-          folder = true,
-          folder_arrow = true,
-          git = true,
-        },
-
-        glyphs = {
-          default = "󰈚",
-          symlink = "",
-          folder = {
-            default = "",
-            empty = "",
-            empty_open = "",
-            open = "",
-            symlink = "",
-            symlink_open = "",
-            arrow_open = "",
-            arrow_closed = "",
-          },
-
-          git = {
-            unstaged = "",
-            staged = "✓",
-            unmerged = "",
-            renamed = "➜",
-            untracked = "U",
-            deleted = "",
-            ignored = "◌",
-          },
-        },
+      indent_width = 2,
+      indent_markers = {
+        enable = true,
       },
     },
   },

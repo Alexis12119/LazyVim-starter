@@ -57,3 +57,5 @@ vim.opt.iskeyword:append("-")
 for name, value in pairs(options) do
   vim.opt[name] = value
 end
+
+require("config.globals")

@@ -1,6 +1,5 @@
 ---@type LazySpec
 -- NOTE: For switching between Python venv
-
 return {
   "linux-cultist/venv-selector.nvim",
   branch = "regexp",

@@ -1,6 +1,5 @@
 ---@type LazySpec
 -- NOTE: Keymaps UI
-
 return {
   "folke/which-key.nvim",
   opts = {

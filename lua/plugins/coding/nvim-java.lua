@@ -1,6 +1,5 @@
 ---@type LazySpec
 -- NOTE: For Java Development
-
 return {
   {
     "nvim-java/nvim-java",

@@ -1,6 +1,5 @@
 ---@type LazySpec
 -- NOTE: For Laravel Development
-
 return {
   "adalessa/laravel.nvim",
   event = "VeryLazy",

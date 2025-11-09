@@ -1,6 +1,5 @@
 ---@type LazySpec
 -- NOTE: Neovim LSP Configuration
-
 return {
   "neovim/nvim-lspconfig",
   opts = function(_, opts)

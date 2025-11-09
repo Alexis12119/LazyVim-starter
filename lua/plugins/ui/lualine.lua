@@ -1,6 +1,3 @@
----@type LazySpec
--- NOTE: Statusline
-
 local function get_venv(variable)
   local venv = os.getenv(variable)
   if venv ~= nil and string.find(venv, "/") then
@@ -117,6 +114,8 @@ local clients = function()
   end
 end
 
+---@type LazySpec
+-- NOTE: Statusline
 return {
   {
     "nvim-lualine/lualine.nvim",

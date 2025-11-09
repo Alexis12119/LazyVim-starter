@@ -1,6 +1,5 @@
 ---@type LazySpec
 -- NOTE: For Flutter Development
-
 return {
   "akinsho/flutter-tools.nvim",
   ft = "dart",

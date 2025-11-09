@@ -1,6 +1,5 @@
 ---@type LazySpec
 -- NOTE: Collaboration
-
 return {
   "nomad/nomad",
   version = "*",

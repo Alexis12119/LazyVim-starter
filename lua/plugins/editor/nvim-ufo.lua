@@ -13,8 +13,8 @@ return {
     vim.o.foldenable = true
   end,
   opts = {
-    provider_selector = function(_, _, _)
-      return { "treesitter", "indent" }
+    provider_selector = function(_, _, buftype)
+      return buftype == "" and { "treesitter", "indent" }
     end,
   },
   dependencies = {

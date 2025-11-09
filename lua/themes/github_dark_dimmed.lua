@@ -78,6 +78,7 @@ M.polish_hl = {
     CurSearch = { fg = C.black, bg = C.blue },
     Substitute = { fg = C.white, bg = C.one_bg3 },
     SupermavenSuggestion = { fg = C.light_grey },
+    NonText = { fg = C.line },
 
     -- DiffView syntax highlights (WebStorm-style)
     DiffAdd = { bg = E.diff_dark_green, fg = C.green },

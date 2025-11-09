@@ -160,7 +160,7 @@ autocmd("VimLeave", {
   desc = "Stop timer on exit",
 })
 
-vim.api.nvim_create_autocmd("LspAttach", {
+autocmd("LspAttach", {
   group = vim.api.nvim_create_augroup("UserLspConfig", {}),
   callback = function(ev)
     local client = vim.lsp.get_client_by_id(ev.data.client_id)

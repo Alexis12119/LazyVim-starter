@@ -120,7 +120,7 @@ return {
   {
     "nvim-lualine/lualine.nvim",
     opts = function(_, opts)
-      table.insert(opts.sections.lualine_x, { clients })
+      -- table.insert(opts.sections.lualine_x, { clients })
       table.insert(opts.sections.lualine_x, {
         function()
           local venv = python_venv()

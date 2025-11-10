@@ -10,9 +10,13 @@
 return {
   {
     "LazyVim/LazyVim",
-    opts = {
-      -- we still use tokyonight as the base scheme, but override heavily to match github_dark_dimmed
-      colorscheme = "nvchad",
-    },
+    opts = function(_, opts)
+      opts.colorscheme = "nvchad"
+      if opts.colorscheme == "nvchad" then
+        for _, v in ipairs(vim.fn.readdir(vim.g.base46_cache)) do
+          dofile(vim.g.base46_cache .. v)
+        end
+      end
+    end,
   },
 }

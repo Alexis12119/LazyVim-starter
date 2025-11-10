@@ -43,7 +43,6 @@ vim.keymap.set("n", "<leader>lL", "<cmd>Lazy log<cr>", { desc = "Lazy Log" })
 vim.keymap.set("n", "<leader>lc", "<cmd>Lazy clean<cr>", { desc = "Lazy Clean" })
 vim.keymap.set("n", "<leader>lp", "<cmd>Lazy profile<cr>", { desc = "Lazy Profile" })
 vim.keymap.set("n", "<leader>li", "<cmd>Lazy install<cr>", { desc = "Lazy Install" })
-vim.keymap.set("n", "<leader>ll", "<cmd>Lazy load", { desc = "Load Plugin" })
 vim.keymap.set("n", "<leader>lH", "<cmd>Lazy help<cr>", { desc = "Lazy Help" })
 vim.keymap.set("n", "<leader>ld", "<cmd>Lazy debug<cr>", { desc = "Lazy Debug" })
 

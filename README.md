@@ -209,7 +209,7 @@ The following plugins are intentionally disabled to avoid conflicts:
 └── .neoconf.json       # Neoconf settings
 ```
 
-## 🔧 What's Different from Stock LazyVim
+## 🔧 What's Different from LazyVim
 
 ### Custom Additions
 

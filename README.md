@@ -114,13 +114,13 @@ In windows, you can use [scoop](https://scoop.sh/) to install them.
 #### Linux/macOS
 
 ```bash
-curl -fsSL https://raw.githubusercontent.com/Alexis12119/LazyVim-starter/main/installer/install.sh | bash
+bash <(curl -s https://raw.githubusercontent.com/Alexis12119/LazyVim-starter/main/installer/install.sh)
 ```
 
 #### Windows (PowerShell)
 
 ```powershell
-iwr -useb https://raw.githubusercontent.com/Alexis12119/LazyVim-starter/main/installer/install.ps1 | iex
+Invoke-WebRequest https://raw.githubusercontent.com/Alexis12119/LazyVim-starter/main/installer/install.ps1 -UseBasicParsing | Invoke-Expression
 ```
 
 ### Manual Install
@@ -178,6 +178,7 @@ iwr -useb https://raw.githubusercontent.com/Alexis12119/LazyVim-starter/main/ins
 ### Disabled Features
 
 The following plugins are intentionally disabled to avoid conflicts:
+
 - **nvim-tree** - File explorer (disabled)
 - **oil.nvim** - Buffer explorer (disabled)
 - **opencode** - AI assistant (disabled, Supermaven used instead)
@@ -211,6 +212,7 @@ The following plugins are intentionally disabled to avoid conflicts:
 ## 🔧 What's Different from Stock LazyVim
 
 ### Custom Additions
+
 - **Compiler.nvim** - Code compilation and task management
 - **Nomad** - Real-time collaboration for pair programming
 - **Database Tools** - vim-dadbod suite for database management
@@ -219,44 +221,52 @@ The following plugins are intentionally disabled to avoid conflicts:
 - **Custom Theme** - Extensive GitHub Dark Dimmed customization
 
 ### Enhanced Features
+
 - **Project Management** - Custom project detection patterns
 - **Python Development** - venv-selector integration
 - **Testing** - Multi-language neotest adapters
 - **Performance** - Optimized Neovim options for better responsiveness
 
 ### Disabled Features
+
 - nvim-tree and oil.nvim (file explorers)
 - opencode plugins (using Supermaven instead)
 
 ## 🛠️ Customization Guide
 
 ### Adding New Plugins
+
 1. Create a new file in `lua/plugins/` directory
 2. Follow the LazySpec format used in existing plugin files
 3. Use the import system in `lua/plugins/init.lua`
 
 ### Modifying Theme
+
 - Edit `lua/themes/github_dark_dimmed.lua` for theme colors
 - Modify `lua/highlights.lua` for additional syntax highlighting
 - Language-specific highlights are defined in the theme file
 
 ### Project Configuration
+
 - Project detection patterns are in `lua/plugins/util/project.lua`
 - Add new patterns to the `patterns` array for your project types
 
 ### LSP Customization
+
 - Language-specific LSP settings are in `lua/plugins/lsp/settings/`
 - Create new files for additional language servers
 
 ## 🔍 Troubleshooting
 
 ### Common Issues
+
 - **Plugin not loading**: Check if plugin is enabled in configuration
 - **LSP not starting**: Verify language server is installed and configured
 - **Theme issues**: Ensure terminal supports true colors (24-bit)
 - **Performance**: Check for heavy plugins or large files
 
 ### Getting Help
+
 - Check LazyVim documentation for base functionality
 - Review plugin-specific documentation in their repositories
 - Open an issue on this repository for configuration-specific problems

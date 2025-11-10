@@ -1,3 +1,5 @@
+---@type LazySpec
+-- NOTE: NvChad Plugins
 return {
   {
     "nvchad/ui",

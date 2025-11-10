@@ -141,10 +141,10 @@ Invoke-WebRequest https://raw.githubusercontent.com/Alexis12119/LazyVim-starter/
 
    ```bash
    # Linux/macOS
-   git clone https://github.com/Alexis12119/LazyVim-starter ~/.config/nvim
+   git clone https://github.com/Alexis12119/LazyVim-starter.git ~/.config/nvim
 
    # Windows
-   git clone https://github.com/Alexis12119/LazyVim-starter $env:LOCALAPPDATA\nvim
+   git clone https://github.com/Alexis12119/LazyVim-starter.git $env:LOCALAPPDATA\nvim
    ```
 
 3. Start Neovim and let Lazy install the plugins:

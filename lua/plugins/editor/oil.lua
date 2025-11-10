@@ -3,13 +3,11 @@
 return {
   "stevearc/oil.nvim",
   ---@module 'oil'
-  ---@type oil.SetupOpts
   enabled = false,
   opts = {},
   init = function()
     vim.keymap.set("n", "<leader>O", function()
       if vim.bo.filetype == "oil" then
-        ---@type fun(buf?: number|snacks.bufdelete.Opts)
         Snacks.bufdelete()
       else
         vim.cmd("Oil")

@@ -42,6 +42,8 @@ bash <(curl -s https://raw.githubusercontent.com/Alexis12119/LazyVim-starter/mai
 #### Windows (PowerShell)
 
 ```powershell
+Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope CurrentUser
+
 Invoke-WebRequest https://raw.githubusercontent.com/Alexis12119/LazyVim-starter/main/installer/install.ps1 -UseBasicParsing | Invoke-Expression
 ```
 

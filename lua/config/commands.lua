@@ -10,7 +10,6 @@ local command = vim.api.nvim_create_user_command
 -- --------------------------------------------------------------------
 -- LuaSnip: Edit Snippet Files
 -- --------------------------------------------------------------------
--- Opens the snippet file(s) for the current filetype in a split window.
 -- Useful for quickly editing or creating snippets managed by LuaSnip.
 command("LuaSnipEdit", function()
   require("luasnip.loaders").edit_snippet_files()

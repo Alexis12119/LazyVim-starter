@@ -14,7 +14,7 @@ M.base46 = {
 }
 
 M.ui = {
-  telescope = { style = "borderless" }, -- borderless / bordered
+  telescope = { style = "bordered" },
   cmp = {
     icons_left = true,
     style = "default", -- default/flat_light/flat_dark/atom/atom_colored

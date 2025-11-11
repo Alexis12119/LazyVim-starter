@@ -212,7 +212,7 @@ autocmd("LspAttach", {
 
     -- NOTE: Disable Semantic Tokens
     -- Disable semantic tokens (optional: prevents over-highlighting)
-    -- if client:supports_method("textDocument/semanticTokens") then
+    -- if client and client.server_capabilities.semanticTokensProvider then
     --   client.server_capabilities.semanticTokensProvider = nil
     -- end
 

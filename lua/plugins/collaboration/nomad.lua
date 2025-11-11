@@ -3,7 +3,7 @@
 return {
   "nomad/nomad",
   version = "*",
-  enabled = vim.g.is_windows,
+  enabled = not vim.g.is_windows,
   cmd = "Mad",
   build = function()
     ---@type nomad.neovim.build

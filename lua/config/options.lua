@@ -1,3 +1,5 @@
+-- NOTE: Neovim Options
+
 -- ====================================================================
 -- Neovim Options Configuration
 -- These settings are applied before lazy.nvim starts up.

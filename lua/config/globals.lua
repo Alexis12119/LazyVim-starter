@@ -1,3 +1,5 @@
+-- NOTE: Global Variables
+
 -- ====================================================================
 -- Global Variables Configuration
 -- These define environment-specific values and toggle certain Neovim behaviors.

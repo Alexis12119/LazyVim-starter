@@ -10,7 +10,7 @@ clone_repository() {
   local target_dir="$2"
 
   echo "Cloning $repo_url to $target_dir..."
-  if git clone "$repo_url" "$target_dir" 2>/dev/null; then
+  if git clone "$repo_url" "$target_dir" >/dev/null 2>&1; then
     echo "Clone successful."
   else
     echo "Error: Could not clone $repo_url to $target_dir."
@@ -20,23 +20,25 @@ clone_repository() {
 
 # Function to remove existing plugins
 remove_existing_plugins() {
-  # Remove the existing plugins
-  echo "Removing the existing plugins..."
-  rm -rf "$config_plugins"
+  if [ -d "$config_plugins" ]; then
+    echo "Removing the existing plugins..."
+    rm -rf "$config_plugins"
+  else
+    echo "No plugin directory found. Skipping plugin removal."
+  fi
 }
 
-# Check if the neovim configuration directory already exists
+# Check if the Neovim configuration directory already exists
 if [ -d "$config_dir" ]; then
-  read -p "Neovim configuration directory already exists. Do you want to replace it with the new configuration? (y/n): " response
-  if [[ "$response" =~ ^[Yy] ]]; then
-    read -p "Do you want to remove the existing plugins as well? (y/n): " remove_plugins_response
-    if [[ "$remove_plugins_response" =~ ^[Yy] ]]; then
+  read -rp "Neovim configuration directory already exists. Do you want to replace it with the new configuration? (y/n): " response
+  if [[ "$response" =~ ^[Yy]$ ]]; then
+    read -rp "Do you want to remove the existing plugins as well? (y/n): " remove_plugins_response
+    if [[ "$remove_plugins_response" =~ ^[Yy]$ ]]; then
       remove_existing_plugins
     fi
 
-    # Remove the existing neovim configuration directory
-    echo "Removing the existing neovim configuration directory..."
-    if rm -rf "$config_dir" 2>/dev/null; then
+    echo "Removing the existing Neovim configuration directory..."
+    if rm -rf "$config_dir" >/dev/null 2>&1; then
       echo "Existing configuration removed."
     else
       echo "Error: Could not remove the existing configuration."
@@ -48,8 +50,10 @@ if [ -d "$config_dir" ]; then
   fi
 fi
 
-# Clone the Git repositories
+# Clone the Git repository
 clone_repository "$config_repo" "$config_dir"
+
+echo "Launching Neovim to complete setup..."
 nvim
 
-echo "Installation complete. Your neovim configuration is now set up!"
+echo "Installation complete. Your Neovim configuration is now set up!"

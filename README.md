@@ -2,6 +2,79 @@
 
 A highly customized LazyVim setup with extensive language support, AI integration, and modern development tools.
 
+## 🚀 Installation
+
+### Prerequisites
+
+In windows, you can use [scoop](https://scoop.sh/) to install them.
+
+- **Docker:**
+  - [lazydocker](https://github.com/jesseduffield/lazydocker)
+
+- **Git:**
+  - [lazygit](https://github.com/jesseduffield/lazygit)
+
+- **Telescope:**
+  - [fd](https://github.com/sharkdp/fd)
+  - [bat](https://github.com/sharkdp/bat)
+  - [ripgrep](https://github.com/BurntSushi/ripgrep)
+  - [make](https://www.gnu.org/software/make/)
+  - [mingw-nuwen](https://nuwen.net/mingw.html)
+
+- **Mason.nvim:**
+  - [nodejs](https://nodejs.org/en)
+
+- **Tree-sitter:**
+  - [tree-sitter-cli](https://www.npmjs.com/package/tree-sitter-cli)
+
+- **Nerd Font (For Icons):**
+  - [JetBrainsMono](https://github.com/ryanoasis/nerd-fonts/tree/master/patched-fonts/JetBrainsMono)
+  - [Other Fonts](https://www.nerdfonts.com/font-downloads)
+
+### Quick Install (Recommended)
+
+#### Linux/macOS
+
+```bash
+bash <(curl -s https://raw.githubusercontent.com/Alexis12119/LazyVim-starter/main/installer/install.sh)
+```
+
+#### Windows (PowerShell)
+
+```powershell
+Invoke-WebRequest https://raw.githubusercontent.com/Alexis12119/LazyVim-starter/main/installer/install.ps1 -UseBasicParsing | Invoke-Expression
+```
+
+### Manual Install
+
+1. Backup your current Neovim configuration:
+
+   ```bash
+   # Linux/macOS
+   mv ~/.config/nvim ~/.config/nvim.backup
+   mv ~/.local/share/nvim ~/.local/share/nvim.backup
+
+   # Windows
+   mv $env:LOCALAPPDATA\nvim $env:LOCALAPPDATA\nvim.backup
+   mv $env:LOCALAPPDATA\nvim-data $env:LOCALAPPDATA\nvim-data.backup
+   ```
+
+2. Clone this configuration:
+
+   ```bash
+   # Linux/macOS
+   git clone https://github.com/Alexis12119/LazyVim-starter.git ~/.config/nvim
+
+   # Windows
+   git clone https://github.com/Alexis12119/LazyVim-starter.git $env:LOCALAPPDATA\nvim
+   ```
+
+3. Start Neovim and let Lazy install the plugins:
+
+   ```bash
+   nvim
+   ```
+
 ## ✨ Features
 
 ### 🤖 AI & Coding
@@ -85,79 +158,6 @@ A highly customized LazyVim setup with extensive language support, AI integratio
 - **Framework Support** - Laravel, Spring Boot, Flutter-tools
 - **Competitive Programming** - cphelper.nvim
 - **Performance Optimizations** - Custom Neovim options for better responsiveness
-
-## 🚀 Installation
-
-### Prerequisites
-
-In windows, you can use [scoop](https://scoop.sh/) to install them.
-
-- **Docker:**
-  - [lazydocker](https://github.com/jesseduffield/lazydocker)
-
-- **Git:**
-  - [lazygit](https://github.com/jesseduffield/lazygit)
-
-- **Telescope:**
-  - [fd](https://github.com/sharkdp/fd)
-  - [bat](https://github.com/sharkdp/bat)
-  - [ripgrep](https://github.com/BurntSushi/ripgrep)
-  - [make](https://www.gnu.org/software/make/)
-  - [mingw-nuwen](https://nuwen.net/mingw.html)
-
-- **Nerd Font (For Icons):**
-  - [JetBrainsMono](https://github.com/ryanoasis/nerd-fonts/tree/master/patched-fonts/JetBrainsMono)
-  - [Other Fonts](https://www.nerdfonts.com/font-downloads)
-
-### Quick Install (Recommended)
-
-#### Linux/macOS
-
-```bash
-bash <(curl -s https://raw.githubusercontent.com/Alexis12119/LazyVim-starter/main/installer/install.sh)
-```
-
-#### Windows (PowerShell)
-
-```powershell
-Invoke-WebRequest https://raw.githubusercontent.com/Alexis12119/LazyVim-starter/main/installer/install.ps1 -UseBasicParsing | Invoke-Expression
-```
-
-### Manual Install
-
-1. Backup your current Neovim configuration:
-
-   ```bash
-   # Linux/macOS
-   mv ~/.config/nvim ~/.config/nvim.backup
-   mv ~/.local/share/nvim ~/.local/share/nvim.backup
-
-   # Windows
-   mv $env:LOCALAPPDATA\nvim $env:LOCALAPPDATA\nvim.backup
-   mv $env:LOCALAPPDATA\nvim-data $env:LOCALAPPDATA\nvim-data.backup
-   ```
-
-2. Clone this configuration:
-
-   ```bash
-   # Linux/macOS
-   git clone https://github.com/Alexis12119/LazyVim-starter.git ~/.config/nvim
-
-   # Windows
-   git clone https://github.com/Alexis12119/LazyVim-starter.git $env:LOCALAPPDATA\nvim
-   ```
-
-3. Start Neovim and let Lazy install the plugins:
-
-   ```bash
-   nvim
-   ```
-
-### Installer Features
-
-- **Interactive prompts** to confirm overwrites
-- **Plugin cleanup** option for fresh installs
-- **Cross-platform support** (Linux, macOS, Windows)
 
 ## ⚙️ Configuration
 

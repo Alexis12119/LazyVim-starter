@@ -210,8 +210,11 @@ autocmd("LspAttach", {
       return
     end
 
+    -- NOTE: Disable Semantic Tokens
     -- Disable semantic tokens (optional: prevents over-highlighting)
-    client.server_capabilities.semanticTokensProvider = nil
+    if client:supports_method("textDocument/semanticTokens") then
+      client.server_capabilities.semanticTokensProvider = nil
+    end
 
     -- Populate workspace diagnostics (external plugin)
     require("workspace-diagnostics").populate_workspace_diagnostics(client, vim.api.nvim_get_current_buf())

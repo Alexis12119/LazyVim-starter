@@ -1,6 +1,3 @@
----@type LazySpec
--- NOTE: Fuzzy Finder
-
 local focus_preview = function(prompt_bufnr)
   local action_state = require("telescope.actions.state")
   local picker = action_state.get_current_picker(prompt_bufnr)
@@ -15,6 +12,8 @@ local focus_preview = function(prompt_bufnr)
   -- api.nvim_set_current_win(winid)
 end
 
+---@type LazySpec
+-- NOTE: Fuzzy Finder
 return {
   "nvim-telescope/telescope.nvim",
   opts = {

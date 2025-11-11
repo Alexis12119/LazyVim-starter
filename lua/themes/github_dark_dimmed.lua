@@ -493,44 +493,14 @@ M.polish_hl = {
 
     ["@annotation.dart"] = { fg = C.purple, italic = true },
     ["@attribute.dart"] = { fg = C.purple },
-
-    -- LSP Semantic Highlights
-    ["@lsp.type.class"] = {},
-    ["@lsp.type.comment"] = {},
-    ["@lsp.type.decorator"] = {},
-    ["@lsp.type.enum"] = {},
-    ["@lsp.type.enumMember"] = {},
-    ["@lsp.type.event"] = {},
-    ["@lsp.type.function"] = {},
-    ["@lsp.type.interface"] = {},
-    ["@lsp.type.keyword"] = {},
-    ["@lsp.type.macro"] = {},
-    ["@lsp.type.method"] = {},
-    ["@lsp.type.modifier"] = {},
-    ["@lsp.type.namespace"] = {},
-    ["@lsp.type.number"] = {},
-    ["@lsp.type.operator"] = {},
-    ["@lsp.type.parameter"] = {},
-    ["@lsp.type.property"] = {},
-    ["@lsp.type.regexp"] = {},
-    ["@lsp.type.string"] = {},
-    ["@lsp.type.struct"] = {},
-    ["@lsp.type.type"] = {},
-    ["@lsp.type.typeParameter"] = {},
-    ["@lsp.type.variable"] = {},
-
-    ["@lsp.mod.abstract"] = {},
-    ["@lsp.mod.async"] = {},
-    ["@lsp.mod.declaration"] = {},
-    ["@lsp.mod.defaultLibrary"] = {},
-    ["@lsp.mod.definition"] = {},
-    ["@lsp.mod.deprecated"] = {},
-    ["@lsp.mod.documentation"] = {},
-    ["@lsp.mod.modification"] = {},
-    ["@lsp.mod.readonly"] = {},
-    ["@lsp.mod.static"] = {},
   },
 }
+
+-- Dynamically add all LSP semantic highlight groups as empty
+local lsp_groups = vim.fn.getcompletion("@lsp", "highlight")
+for _, group in ipairs(lsp_groups) do
+  M.polish_hl.treesitter[group] = M.polish_hl.treesitter[group] or {}
+end
 
 M.type = "dark"
 

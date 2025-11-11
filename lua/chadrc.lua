@@ -14,13 +14,7 @@ M.base46 = {
 }
 
 M.ui = {
-  telescope = { style = "bordered" },
-  -- cmp = {
-  --   icons_left = true,
-  --   style = "default", -- default/flat_light/flat_dark/atom/atom_colored
-  --   -- for tailwind, css lsp etc
-  --   format_colors = { lsp = true, icon = "󱓻" },
-  -- },
+  telescope = { style = "borderless" },
   tabufline = {
     enabled = false,
     lazyload = false,

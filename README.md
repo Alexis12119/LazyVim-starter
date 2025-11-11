@@ -206,9 +206,7 @@ The following plugins are intentionally disabled to avoid conflicts:
 ├── README.md
 ├── init.lua            # Entry point
 ├── lazyvim.json        # LazyVim extras configuration
-├── lazy-lock.json      # Plugin lockfile
 ├── .luarc.json         # Lua language server config
-└── .neoconf.json       # Neoconf settings
 ```
 
 ## 🔧 What's Different from LazyVim

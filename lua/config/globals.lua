@@ -1,17 +1,52 @@
--- NOTE: Global Variables
+-- ====================================================================
+-- Global Variables Configuration
+-- These define environment-specific values and toggle certain Neovim behaviors.
+-- ====================================================================
 
+-- --------------------------------------------------------------------
+-- Detect the current operating system
+-- --------------------------------------------------------------------
 local sysname = vim.uv.os_uname().sysname
-local os = sysname:match("Windows") and "Windows" or sysname:match("Linux") and "Linux" or sysname -- Windows, Linux, Darwin, NetBSD, etc.
+-- Normalize OS name (returns "Windows", "Linux", "Darwin", etc.)
+local os = sysname:match("Windows") and "Windows" or sysname:match("Linux") and "Linux" or sysname -- fallback to whatever system name was returned
+
+-- Boolean convenience flag for platform checks
 local is_windows = os == "Windows"
 
-vim.g.skip_ts_context_commentstring_module = true -- disable treesitter context commentstring
-vim.g.loaded_node_provider = 0 -- disable node provider
-vim.g.loaded_python3_provider = 0 -- disable python3 provider
-vim.g.loaded_perl_provider = 0 -- disable perl provider
-vim.g.loaded_ruby_provider = 0 -- disable ruby provider
+-- --------------------------------------------------------------------
+-- Treesitter and provider settings
+-- --------------------------------------------------------------------
+
+-- Disable Treesitter’s context-based commentstring module
+-- (Prevents potential conflicts with certain comment plugins or LSP behavior)
+vim.g.skip_ts_context_commentstring_module = true
+
+-- Disable language providers you don’t use to speed up startup time
+-- These providers allow Neovim to run external languages inside the editor.
+-- Setting them to 0 means they will not be loaded.
+vim.g.loaded_node_provider = 0 -- Disable Node.js provider
+vim.g.loaded_python3_provider = 0 -- Disable Python 3 provider
+vim.g.loaded_perl_provider = 0 -- Disable Perl provider
+vim.g.loaded_ruby_provider = 0 -- Disable Ruby provider
+
+-- --------------------------------------------------------------------
+-- UI and environment-specific globals
+-- --------------------------------------------------------------------
+
+-- Icon used to visually represent theme toggling in your UI
 vim.g.toggle_theme_icon = "   "
+
+-- Store OS information globally for easy access in other modules
 vim.g.os = os
 vim.g.is_windows = is_windows
-vim.g.path_delimiter = is_windows and ";" or ":"
-vim.g.path_separator = is_windows and "\\" or "/"
+
+-- Define OS-specific path delimiters and separators
+-- Useful for dynamically constructing paths in plugin configs or scripts
+vim.g.path_delimiter = is_windows and ";" or ":" -- Used for PATH-like variables
+vim.g.path_separator = is_windows and "\\" or "/" -- Used for filesystem paths
+
+-- --------------------------------------------------------------------
+-- Feature toggles
+-- --------------------------------------------------------------------
+
 vim.g.ai_cmp = false

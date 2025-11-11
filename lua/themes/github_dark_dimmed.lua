@@ -506,7 +506,7 @@ M.polish_hl = {
     ["@lsp.type.keyword"] = { fg = C.red },
     ["@lsp.type.macro"] = { fg = C.purple },
     ["@lsp.type.method"] = { fg = C.blue },
-    ["@lsp.type.modifier"] = { fg = C.red, italic = true },
+    ["@lsp.type.modifier"] = { fg = C.purple, italic = true },
     ["@lsp.type.namespace"] = { fg = E.light_blue },
     ["@lsp.type.number"] = { fg = C.yellow },
     ["@lsp.type.operator"] = { fg = C.purple },
@@ -527,7 +527,7 @@ M.polish_hl = {
     ["@lsp.mod.deprecated"] = { strikethrough = true },
     ["@lsp.mod.documentation"] = { fg = C.light_grey, italic = true },
     ["@lsp.mod.modification"] = { underline = true },
-    ["@lsp.mod.readonly"] = { fg = C.yellow },
+    ["@lsp.mod.readonly"] = { fg = C.white },
     ["@lsp.mod.static"] = { bold = true },
   },
 }

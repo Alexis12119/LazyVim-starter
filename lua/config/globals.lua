@@ -14,12 +14,8 @@ local os = sysname:match("Windows") and "Windows" or sysname:match("Linux") and 
 local is_windows = os == "Windows"
 
 -- --------------------------------------------------------------------
--- Treesitter and provider settings
+-- Provider settings
 -- --------------------------------------------------------------------
-
--- Disable Treesitter’s context-based commentstring module
--- (Prevents potential conflicts with certain comment plugins or LSP behavior)
-vim.g.skip_ts_context_commentstring_module = true
 
 -- Disable language providers you don’t use to speed up startup time
 -- These providers allow Neovim to run external languages inside the editor.

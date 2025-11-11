@@ -43,6 +43,7 @@ require("lazy").setup({
     enabled = true,
     notify = false, -- get a notification when changes are found
   },
+  lockfile = vim.fn.stdpath("data") .. "/lazy-lock.json",
   performance = {
     rtp = {
       -- disable some rtp plugins

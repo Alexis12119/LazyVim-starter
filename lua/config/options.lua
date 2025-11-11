@@ -97,16 +97,6 @@ vim.o.lazyredraw = false
 -- Enable full 24-bit color support in the terminal
 vim.o.termguicolors = true
 
--- Customize fill characters (UI symbols for folds, end of buffer, etc.)
-vim.o.fillchars = {
-  eob = " ", -- Empty line at the end of buffer
-  fold = " ", -- Fill character for folded text
-  foldopen = "", -- Icon for open fold
-  foldsep = " ", -- Separator between folds
-  foldclose = "", -- Icon for closed fold
-  lastline = " ", -- Avoid ~ at the end of files
-}
-
 -- Disable the old ruler (line/column display)
 vim.o.ruler = false
 
@@ -123,6 +113,16 @@ vim.o.sessionoptions = "blank,buffers,curdir,folds,help,tabpages,winsize,winpos,
 -- Extended options
 -- ====================================================================
 
+-- Customize fill characters (UI symbols for folds, end of buffer, etc.)
+vim.opt.fillchars = {
+  eob = " ", -- Empty line at the end of buffer
+  fold = " ", -- Fill character for folded text
+  foldopen = "", -- Icon for open fold
+  foldsep = " ", -- Separator between folds
+  foldclose = "", -- Icon for closed fold
+  lastline = " ", -- Avoid ~ at the end of files
+}
+
 -- Append to 'shortmess' to reduce command line noise
 -- 'A' = don't show swapfile messages, 'c' = suppress completion messages
 vim.opt.shortmess:append("Ac")
@@ -132,8 +132,3 @@ vim.opt.whichwrap:append("<>[]hl")
 
 -- Treat hyphenated words as a single word (for motions like 'w' and 'b')
 vim.opt.iskeyword:append("-")
-
--- ====================================================================
--- Load global variables and custom settings
--- ====================================================================
-require("config.globals")

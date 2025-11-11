@@ -42,7 +42,6 @@ vim.g.is_windows = is_windows
 -- Useful for dynamically constructing paths in plugin configs or scripts
 vim.g.path_delimiter = is_windows and ";" or ":" -- Used for PATH-like variables
 vim.g.path_separator = is_windows and "\\" or "/" -- Used for filesystem paths
-
 -- --------------------------------------------------------------------
 -- Feature toggles
 -- --------------------------------------------------------------------

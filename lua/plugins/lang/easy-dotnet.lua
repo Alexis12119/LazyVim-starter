@@ -1,7 +1,7 @@
 ---@type LazySpec
 -- NOTE: For .NET Development
 return {
-  "D1ceWard/easy-dotnet.nvim",
+  "GustavEikaas/easy-dotnet.nvim",
   event = "VeryLazy",
   keys = {
     {

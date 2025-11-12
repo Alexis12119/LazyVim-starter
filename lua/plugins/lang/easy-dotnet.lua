@@ -75,13 +75,6 @@ return {
       desc = "Dotnet: Run Tests",
     },
     {
-      "<leader>cDts",
-      function()
-        vim.cmd("Dotnet test solution")
-      end,
-      desc = "Dotnet: Run Tests (Solution)",
-    },
-    {
       "<leader>cDlr",
       function()
         vim.cmd("Dotnet lsp restart")

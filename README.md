@@ -246,14 +246,12 @@ The following plugins are intentionally disabled to avoid conflicts:
 └── LICENSE            # License file
 ```
 
-## 🔧 What's the Difference from LazyVim
-
 ### Custom Additions
 
 - **Compiler.nvim** - Code compilation and task management
 - **Nomad** - Real-time collaboration for pair programming
 - **Database Tools** - vim-dadbod suite for database management
-- **Framework Support** - Laravel, Spring Boot, Flutter-tools
+- **Framework Support** - Laravel, Spring Boot, Flutter-tools, .NET Framework
 - **Competitive Programming** - cphelper.nvim
 - **Custom Theme** - Extensive GitHub Dark Dimmed customization
 

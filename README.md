@@ -123,7 +123,7 @@ Invoke-WebRequest https://raw.githubusercontent.com/Alexis12119/LazyVim-starter/
 - **Rust** - Rust programming with rustaceanvim
 - **Java** - Java development with nvim-java and Spring Boot support
 - **C/C++** - C/C++ with Clangd
-- **C#/.NET** - .NET development with Omnisharp
+- **C#/.NET** - .NET development with [easy-dotnet.nvim](https://github.com/GustavEikaas/easy-dotnet.nvim)
 - **Kotlin** - Kotlin language
 - **Ruby** - Ruby development
 - **PHP** - PHP development with Laravel framework support

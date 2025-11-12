@@ -211,27 +211,42 @@ The following plugins are intentionally disabled to avoid conflicts:
 
 ```
 ~/.config/nvim/
+├── installer/          # Installation scripts
+│   ├── install.ps1     # PowerShell installer
+│   ├── install.sh      # Shell installer
+│   └── install_requirements.ps1
 ├── lua/
-│   ├── config/          # Core configuration (options, keymaps, autocmds)
-│   │   ├── statusline/  # Custom statusline configuration
-│   │   └── tabufline/   # Tabline configuration
-│   ├── plugins/         # Plugin configurations
-│   │   ├── ai/          # AI-related plugins
-│   │   ├── coding/      # Language-specific tools
+│   ├── config/         # Core configuration (options, keymaps, autocmds)
+│   │   ├── statusline/ # Custom statusline configuration
+│   │   └── tabufline/  # Tabline configuration
+│   ├── plugins/        # Plugin configurations
+│   │   ├── ai/         # AI-related plugins
 │   │   ├── collaboration/ # Real-time collaboration
 │   │   ├── colorscheme/ # Theme configuration
-│   │   ├── editor/      # Core editor plugins
-│   │   ├── lsp/         # LSP configurations and settings
-│   │   ├── ui/          # User interface plugins
-│   │   └── util/        # Utility plugins
-│   └── themes/          # Custom themes (GitHub Dark Dimmed)
+│   │   ├── editor/     # Core editor plugins
+│   │   ├── fun/        # Fun and experimental plugins
+│   │   ├── integration/ # Integration plugins
+│   │   ├── langs/      # Language-specific tools
+│   │   ├── lsp/        # LSP configurations and settings
+│   │   │   └── settings/ # Language-specific LSP settings
+│   │   ├── ui/         # User interface plugins
+│   │   └── util/       # Utility plugins
+│   ├── themes/         # Custom themes (GitHub Dark Dimmed)
+│   ├── chadrc.lua      # NvChad configuration
+│   └── highlights.lua  # Custom syntax highlighting
+├── snippets/           # Code snippets
+│   ├── snipmate/       # Snipmate format snippets
+│   └── vscode/         # VSCode format snippets
 ├── README.md
-├── init.lua            # Entry point
-├── lazyvim.json        # LazyVim extras configuration
-├── .luarc.json         # Lua language server config
+├── init.lua           # Entry point
+├── lazyvim.json       # LazyVim extras configuration
+├── .luarc.json        # Lua language server config
+├── ginit.vim          # GUI Neovim configuration
+├── stylua.toml        # StyLua formatter configuration
+└── LICENSE            # License file
 ```
 
-## 🔧 What's Different from LazyVim
+## 🔧 What's the Difference from LazyVim
 
 ### Custom Additions
 

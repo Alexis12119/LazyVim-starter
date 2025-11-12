@@ -36,7 +36,7 @@ In windows, you can use [scoop](https://scoop.sh/) to install them.
 #### Linux/macOS
 
 ```bash
-bash <(curl -s https://raw.githubusercontent.com/Alexis12119/LazyVim-starter/main/installer/install.sh)
+bash <(curl -s https://raw.githubusercontent.com/Alexis12119/nvim-config/main/installer/install.sh)
 ```
 
 #### Windows (PowerShell)
@@ -44,7 +44,7 @@ bash <(curl -s https://raw.githubusercontent.com/Alexis12119/LazyVim-starter/mai
 ```powershell
 Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope CurrentUser
 
-Invoke-WebRequest https://raw.githubusercontent.com/Alexis12119/LazyVim-starter/main/installer/install.ps1 -UseBasicParsing | Invoke-Expression
+Invoke-WebRequest https://raw.githubusercontent.com/Alexis12119/nvim-config/main/installer/install.ps1 -UseBasicParsing | Invoke-Expression
 ```
 
 ### Manual Install
@@ -65,10 +65,10 @@ Invoke-WebRequest https://raw.githubusercontent.com/Alexis12119/LazyVim-starter/
 
    ```bash
    # Linux/macOS
-   git clone https://github.com/Alexis12119/LazyVim-starter.git ~/.config/nvim
+   git clone https://github.com/Alexis12119/nvim-config.git ~/.config/nvim
 
    # Windows
-   git clone https://github.com/Alexis12119/LazyVim-starter.git $env:LOCALAPPDATA\nvim
+   git clone https://github.com/Alexis12119/nvim-config.git $env:LOCALAPPDATA\nvim
    ```
 
 3. Start Neovim and let Lazy install the plugins:
@@ -322,12 +322,11 @@ This project is licensed under the Apache License 2.0 - see the [LICENSE](LICENS
 
 ## 🙏 Credits
 
-- [LazyVim](https://github.com/LazyVim/LazyVim) - The base distribution
+- [LazyVim](https://github.com/LazyVim/LazyVim) - The base configuration
 - [NvChad](https://github.com/NvChad/NvChad) - UI components and inspiration
 - All the plugin authors and contributors
 
 ## 🔗 Links
 
-- **Repository**: [https://github.com/Alexis12119/LazyVim-starter](https://github.com/Alexis12119/LazyVim-starter)
 - **LazyVim Docs**: [https://lazyvim.github.io/](https://lazyvim.github.io/)
 - **Neovim**: [https://neovim.io/](https://neovim.io/)

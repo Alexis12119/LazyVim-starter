@@ -1,6 +1,3 @@
-# 💤 LazyVim Configuration
-
-<!--toc:start-->
 - [💤 LazyVim Configuration](#💤-lazyvim-configuration)
   - [🚀 Installation](#🚀-installation)
     - [Prerequisites](#prerequisites)
@@ -43,9 +40,6 @@
   - [📄 License](#📄-license)
   - [🙏 Credits](#🙏-credits)
   - [🔗 Links](#🔗-links)
-<!--toc:end-->
-
-A highly customized LazyVim setup with extensive language support, AI integration, and modern development tools.
 
 ## 🚀 Installation
 

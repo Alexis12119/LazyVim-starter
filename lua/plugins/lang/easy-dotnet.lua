@@ -42,7 +42,7 @@ return {
     {
       "<leader>cDb",
       function()
-        vim.cmd("Dotnet build")
+        vim.cmd("Dotnet build quickfix")
       end,
       desc = "Dotnet: Build Project",
     },
@@ -82,7 +82,7 @@ return {
       desc = "Dotnet: Run Tests (Solution)",
     },
     {
-      "<leader>cDlrs",
+      "<leader>cDlr",
       function()
         vim.cmd("Dotnet lsp restart")
       end,
@@ -103,21 +103,28 @@ return {
       desc = "Dotnet: Stop LSP",
     },
     {
-      "<leader>cDo",
+      "<leader>cDP",
+      function()
+        vim.cmd("Dotnet project view")
+      end,
+      desc = "Dotnet: Project View",
+    },
+    {
+      "<leader>cDpo",
       function()
         vim.cmd("Dotnet outdated")
       end,
       desc = "Dotnet: Check Outdated Packages",
     },
     {
-      "<leader>cDp",
+      "<leader>cDpp",
       function()
         vim.cmd("Dotnet pack")
       end,
       desc = "Dotnet: Pack Project",
     },
     {
-      "<leader>cDP",
+      "<leader>cDpP",
       function()
         vim.cmd("Dotnet push")
       end,
@@ -182,9 +189,6 @@ return {
       opts = {
         spec = {
           { "<leader>cD", group = ".NET" },
-          { "<leader>cDb", group = "Build" },
-          { "<leader>cDr", group = "Run" },
-          { "<leader>cDt", group = "Test" },
           { "<leader>cDd", group = "Database" },
           { "<leader>cDm", group = "Migrations" },
           { "<leader>cDl", group = "LSP" },

@@ -163,6 +163,28 @@ Invoke-WebRequest https://raw.githubusercontent.com/Alexis12119/LazyVim-starter/
 
 ## ⚙️ Configuration
 
+### Managing Language Support
+
+This configuration includes extensive language support through LazyVim Extras. If you're seeing too many notifications about missing language servers or tools, you can easily remove unwanted language integrations:
+
+#### Using LazyExtras UI
+
+1. Open LazyExtras: `:LazyExtras` or press `<leader>le`
+2. Navigate to the language/category you want to remove
+3. Press `x` to toggle the extra off (it will be marked with `✗`)
+4. Restart Neovim to apply changes
+
+#### Direct Configuration
+
+Edit `lazyvim.json` in your config root and remove unwanted extras from the list.
+
+#### Common Extras to Consider Removing
+
+- **Web Development**: TypeScript, Vue, Svelte, Astro, Tailwind CSS
+- **Backend Languages**: Java, C#, PHP, Rust, Go, Kotlin, Ruby, Zig
+- **Database Tools**: SQL, Prisma, vim-dadbod suite
+- **Framework Support**: Laravel, Spring Boot, Flutter-tools
+
 ### Theme
 
 - **Theme**: Custom GitHub Dark Dimmed with extensive language-specific highlighting
@@ -237,7 +259,7 @@ The following plugins are intentionally disabled to avoid conflicts:
 ### Adding New Plugins
 
 1. Create a new file in `lua/plugins/` directory
-2. Follow the LazySpec format used in existing plugin files
+2. Follow the `LazySpec` format used in existing plugin files
 3. Use the import system in `lua/plugins/init.lua`
 
 ### Modifying Theme
@@ -267,7 +289,7 @@ The following plugins are intentionally disabled to avoid conflicts:
 
 ### Getting Help
 
-- Check LazyVim documentation for base functionality
+- Check [LazyVim](https://lazyvim.github.io/) documentation for base functionality
 - Review plugin-specific documentation in their repositories
 - Open an issue on this repository for configuration-specific problems
 
